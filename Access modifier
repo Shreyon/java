@@ -1,0 +1,82 @@
+1.	Create a class with PRIVATE fields, private method, and a main method. Print the fields in main method. Call the private method in main method. Create a sub class and try to access the private fields and methods from sub class.
+public class pvariable 
+{
+    private String name="Shashwat";
+    private int age=19;
+    private void pvtMethod() 
+    {
+        System.out.println("My Name is " + name + " and my age is " + age);
+    }
+
+    public static void main(String[] args) 
+    {
+        pvariable obj = new pvariable();
+
+        System.out.println(obj.age);
+        System.out.println(obj.name);
+
+        obj.pvtMethod();
+    }
+}
+
+2. Create a class with DEFAULT fields and methods. Access these fields and methods from any other class in the same package.
+class modifier
+{
+   int myAge;
+   String myName;
+   void defaultMethod() 
+   {
+        System.out.println("My name is " + myName + " and my age is " + myAge);
+   }
+}
+
+class DefaultClassFieldsMethod 
+{
+    public static void main(String[] args) 
+    {
+        modifier ob=new modifier();
+        ob.myAge=19 ;
+        ob.myName="Rohit";
+        ob.defaultMethod();
+    }
+}
+
+3.Create a class with PROTECTED fields and methods. Access these fields and methods from any other class in the same package. Also, Access the PROTECTED fields and methods from child class located in a different package Access the PROTECTED fields and methods from any class in different package.
+class protect
+{
+    protected String name;
+    protected void protectedMethod() 
+    {
+        System.out.println("This is a " + name);
+    }
+}
+
+class protectedClass_03 
+{
+    public static void main(String[] args) 
+    {
+        protect ob=new protect();
+        ob.name="Protected Method";
+        ob.protectedMethod();
+    }
+}
+
+4. Create a class with PUBLIC fields and methods. Access the public methods and fields from any class in the same package or different package.
+class publicity
+{
+    public String name = "Public";
+    public void publicMethod() 
+    {
+        System.out.println("This is " + name);
+    }
+}
+
+public class PublicClassFieldsMethods 
+{
+    public static void main(String[] args) 
+    {
+        publicity ob=new publicity();
+        ob.name = "Public Method";
+        ob.publicMethod();
+    }
+}
