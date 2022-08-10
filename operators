@@ -1,0 +1,148 @@
+(1.)	Write a function for arithmetic operators (+, -,*,/)
+class Arithmetic 
+{
+    static void addition (int a, int b)
+    {
+        int add = a + b;
+        System.out.println("Addition of a + b = " + add);
+    }
+    static void subtraction (int a, int b) 
+    {
+        int sub = a - b;
+        System.out.println("Subtraction of a - b = " + sub);
+    }
+    static void multiplication (int a, int b) 
+    {
+        int mul = a * b;
+        System.out.println("Multiplication of a * b = " + mul);
+    }
+    static void division (int a, int b) 
+    {
+        int div = a / b;
+        System.out.println("Division of a / b = " + div);
+    }
+    public static void main(String[] args) 
+    {
+        int a = 10;
+        int b = 2;
+        addition (a, b);
+        subtraction (a, b);
+        multiplication (a, b);
+        division (a, b);
+    }
+}
+
+2. Write a method for increment and decrement operators (++, --)
+class incdec 
+{
+    static void preIncrement(int a, int b) 
+    {
+        int d;                  
+        d=b+(++a);          
+        System.out.println("Values after Pre-Increment a,b : " + a + "," + d);
+    }
+    static void postIncrement(int a, int b) 
+    {
+        int d;                  
+        d=b+(a++);          
+        System.out.println("Values after Post-Increment a,b : " + a + "," + d);
+    }
+    static void preDecrement(int a, int b) 
+    {
+        int d;                  
+        d=b+(--a);          
+        System.out.println("Values after Pre-Decrement a,b:"+a+","+d);
+    }
+    static void postDecrement(int a, int b) 
+    {
+        int d;                  
+        d=b+(a--);          
+        System.out.println("Values after Post-Decrement a,b:"+a+","+d);
+    }
+    public static void main(String[] args) 
+    {
+        int a=10;
+        int b=5;
+        preIncrement(a,b);
+        postIncrement(a,b);
+        preDecrement(a,b);
+        postDecrement(a,b);
+    }
+}
+
+3. Program to equal operator and not equal operators.
+import java.util.Scanner;
+class equal_unequal
+{
+    public static void main(String[] args)
+    {
+        int num1,num2;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter any two numbers to check for equality: ");
+        num1=sc.nextInt();
+        num2=sc.nextInt();
+        if(num1==num2)
+            System.out.println("The two numbers are equal");
+        else if(num1!=num2)
+            System.out.println("The numbers are not equal");
+    }
+}
+
+4. Programs on Logical AND, OR operator and Logical NOT.
+class logical
+{
+    public static void main(String args[])
+    {
+        int a,b,c;
+        a=5;
+        b=20;
+        c=10;
+        System.out.println(a>b&&a>c);
+        System.out.println(a<b&&a<c);
+        System.out.println(a>b&&a<c);
+        
+        System.out.println(a>b||a>c);
+        System.out.println(a<b||a<c);
+        System.out.println(a<b||a>c);
+        
+        System.out.println(!(a>b));
+        System.out.println(!(a<b));
+    }
+}
+
+5. Program for relational operators (<, <==, >, >==)
+class relational
+{
+    public static void main (String args[])
+    {
+        int a,b;
+        a=15;
+        b=20;
+        System.out.println(a<b);
+        System.out.println(a>b);
+        System.out.println(a<=b);
+        System.out.println(a>=b);
+    }
+}
+
+6. Print the smaller and larger number.
+class largesmall
+{
+    public static void main (String args[])
+    {
+        int a,b;
+        a=20;
+        b=30;
+        
+        if(a>b)
+            System.out.println("Larger number is="+a);
+        else
+            System.out.println("Smaller number is="+a);
+        
+        if(b>a)
+            System.out.println("Larger number is="+b);
+        else
+            System.out.println("Smaller number is="+b);
+    }
+}
+
