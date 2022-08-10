@@ -1,0 +1,210 @@
+1.	Create an interface with only one method and implement it in a class. Call the method implemented.
+
+interface onemethod 
+{
+    void oneMethod();
+}
+
+public class InterfaceOneMethod implements onemethod 
+{
+    @Override
+    public void oneMethod() 
+    {
+        System.out.println("My name is Shashwat Khaitan and my age is 19");
+    }
+
+    public static void main(String[] args) 
+    {
+        InterfaceOneMethod if1 = new InterfaceOneMethod();
+        if1.oneMethod();
+    }
+}
+
+2.	Create an interface with two methods but implement only one in a class. Call the method implemented.
+
+interface twomethod 
+{
+    void methodOne();
+    void methodTwo();
+}
+
+class InterfaceTwoMethod implements twomethod 
+{
+    @Override
+    public void methodOne() 
+    {
+        System.out.println("First Method");
+    }
+
+    @Override
+    public void methodTwo() 
+    {
+        System.out.println("Second Method");
+    }
+
+    public static void main(String[] args) 
+    {
+        InterfaceTwoMethod if2 = new InterfaceTwoMethod();
+        if2.methodOne();
+        if2.methodTwo();
+    }
+}
+
+3.	Create two interfaces with one method each. Implement these two interfaces in one class.
+
+interface twointerfaces
+{
+    void methodOne();
+}
+
+interface method1 
+{
+    void methodTwo();
+}
+
+public class TwoInterfaceOneMethod implements twointerfaces, method1 
+{
+    @Override
+    public void methodOne() 
+    {
+        System.out.println("This is Method one");
+    }
+
+    @Override
+    public void methodTwo() 
+    {
+        System.out.println("This is Method two");
+    }
+
+    public static void main(String[] args) 
+    {
+        TwoInterfaceOneMethod if4 = new TwoInterfaceOneMethod();
+        if4.methodOne();
+        if4.methodTwo();
+    }
+}
+4.	Create two interfaces with the same method (same signature) in both the interfaces. Implement these two interfaces in one class. Call the method.
+
+interface twointerfacesamemethod
+{
+    void sameMethod();
+}
+
+interface method2
+{
+    void sameMethod();
+}
+
+class TwoInterfaceSameMethod implements twointerfacesamemethod, method2 
+{
+    @Override
+    public void sameMethod()
+    {
+        System.out.println("This is same method in both the interfaces");
+    }
+
+    public static void main(String[] args) 
+    {
+        TwoInterfaceSameMethod if5 = new TwoInterfaceSameMethod();
+        if5.sameMethod();
+    }
+}
+
+5.	Create an interface with a default method and implement it in a class. Do not provide implementation to the default method and call the method.
+
+interface method3
+{
+    default void defaultMethod() 
+    {
+        System.out.println("This is a default method");
+    }
+}
+
+class InterfaceDefaultMethod implements method3
+{
+    public static void main(String[] args) 
+    {
+        InterfaceDefaultMethod if6 = new InterfaceDefaultMethod();
+        if6.defaultMethod();
+    }
+}
+
+6.	Create an interface and inherit it from the other interface.
+
+interface inheritedinterface
+{
+    void methodOne();
+}
+
+interface Inherited extends inheritedinterface 
+{
+    void methodTwo();
+}
+
+class InheritedInterface implements Inherited 
+{
+    @Override
+    public void methodOne() 
+    {
+        System.out.println("This is first method");
+    }
+    
+    @Override
+    public void methodTwo() 
+    {
+        System.out.println("This is second method");
+    }
+
+    public static void main(String[] args) 
+    {
+        InheritedInterface ob = new InheritedInterface();
+        ob.methodOne();
+        ob.methodTwo();
+    }
+}
+
+7.	Create a PUBLIC interface with fields and methods, fields should have values assigned. Implement this interface to some class and print the values of the interface fields and call the interface methods.
+
+public interface publicinterface
+{
+    int num=111; 
+    public void myMethod();
+}
+
+class interfacepublic implements publicinterface 
+{
+    @Override
+    public void myMethod() 
+    {
+        System.out.println("My name is Rohitman Sharma");
+    }
+
+    public static void main(String[] args) 
+    {
+        interfacepublic ob=new interfacepublic();
+        System.out.println(num);
+        ob.myMethod();
+    }
+}
+
+8. Create a PRIVATE or PROTECTED interface and print the values as above scenario 
+
+9. Create an interface with private, public, and protected fields. 
+
+10. Create an interface with static final variable.
+
+interface privateprotected 
+{
+    public int num1=11;
+    static final int num2=22;
+    final int num3=33;
+}
+
+class InterfacePrivateProtected implements privateprotected 
+{
+    public static void main(String[] args) 
+    {
+        InterfacePrivateProtected if9 = new InterfacePrivateProtected();
+        System.out.println(if9.num1 + " " + if9.num2);
+    }
+}
