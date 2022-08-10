@@ -1,0 +1,101 @@
+1. Print the fields/instance members of the current class using this and without using object.
+
+
+3. Call constructor of the current class using this ()
+
+4. Call argument constructor of current class using this ()
+
+public class CallUsingThis 
+{
+
+    int num;
+    String name;
+
+    CallUsingThis() 
+    {
+        this (30, "Shreyon");
+    }
+
+    CallUsingThis(int num, String name) 
+    {
+        this.num = num;
+        this.name = name;
+        System.out.println(num + " " + name);
+    }
+
+    public static void main (String[] args)
+    {
+        CallUsingThis ts1 = new CallUsingThis();
+        CallUsingThis ts = new CallUsingThis(12, "Computer");
+    }
+}
+
+2. Print the fields/instance members of the parent class using super
+
+5. Call constructor of the parent class using super ()
+
+class Parent 
+{
+    String name = "Shreyon";
+
+    Parent() 
+    {
+        System.out.println("This is parent class constructor");
+    }
+}
+
+class Child extends Parent 
+{
+    String name = "This is computer science";
+
+    Child() 
+   {
+        super();
+        System.out.println("This is child class constructor");
+    }
+
+    void myMethod() 
+    {
+        System.out.println("My name is " + super.name);
+    }
+}
+
+public class CallUsingSuper 
+{
+    public static void main (String[] args) 
+    {
+        Child c = new Child();
+        c.myMethod();
+    }
+}
+
+6. Use this () and super () in methods not in constructors.
+
+class Parent1
+{
+    void method1() 
+   {
+        System.out.println("Used this() and super() in methods");
+    }
+
+    void method2() 
+   {
+        this.method1();
+    }
+}
+class Child extends Parent1  
+{
+    void method3() 
+    {
+        super.method2();
+    }
+}
+
+public class ThisSuperInMethods 
+{
+    public static void main(String[] args) 
+    {
+        Child c = new Child();
+        c.method3();
+    }
+}
