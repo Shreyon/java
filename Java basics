@@ -1,0 +1,85 @@
+1. How to create a class, object, method, and its signature
+class create 
+{
+    void isMethod() 
+    {
+        String a="This is a Method";
+        System.out.println(a);
+    }
+    public static void main (String[] args) 
+    {
+        create ob=new create ();
+        ob.isMethod();
+    }
+}
+
+2. Write a program to print your name.
+class name
+{
+    public static void main(String args[])
+    {
+        System.out.println("Shreyon");
+    }
+}
+
+3. Write a program for a Single line comment, multi-line, and documentation comments.
+class Comments 
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("//This is a Single line comment");
+        System.out.println("/*This is a Multi-line comment */");
+        System.out.println("/**This is a Documentation comment */");
+    }
+}
+
+4. Define variables for different Data Types int, Boolean, char, float, double and print on the Console.
+class datatypes 
+{
+    public static void main(String[] args) 
+    {
+        int i=111;                
+        float f=11.1f;            
+        double d=111.1111;        
+        char c='C';               
+        boolean b=true;          
+
+        System.out.println("Integer="+i);
+        System.out.println("Float="+f);
+        System.out.println("Double="+d);
+        System.out.println("Char="+c);
+        System.out.println("Boolean="+b);
+    }
+}
+
+5. Define the local and Global variables with the same name and print both variables and understand the scope of the variables.
+class variable
+{
+    int a=11;
+    void localVariable() 
+    {
+        int a=22;
+        System.out.println("Local variable a:"+a);
+    }
+    public static void main(String[] args) 
+    {
+        variable ob=new variable();
+        System.out.println("Instance variable a:"+ob.a);
+        ob.localVariable();
+    }
+}
+
+6. Write a function to print your name and call the function from main method.
+class Calling 
+{
+    static void myMethod() 
+    {
+        System.out.println("Rohit Sharma");
+    }
+
+    public static void main(String[] args) 
+    {
+        myMethod();
+    }
+}
+
