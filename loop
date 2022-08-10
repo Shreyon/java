@@ -1,0 +1,241 @@
+1.	Write a program to print “Bright IT Career” ten times using for loop.
+class Loop
+{ 
+    public static void main (String[] args) 
+    { 
+        int i;
+        for(i=0;i<10;i++) 
+        { 
+            System.out.println("Bright IT Career"); 
+        } 
+    } 
+}
+
+2. Write a java program to print 1 to 20 numbers using the while loop.
+class numbers
+{
+    public static void main (String [] args) 
+    {
+        int num=1;
+        while(num<=20)
+            System.out.println(num++);
+    }
+}
+
+3.	Write a program to print the odd and even numbers.
+import java.util.Scanner; 
+class oddeven  
+{ 
+    public static void main(String[] args) 
+    { 
+        int n;  
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of the array: ");
+        n=sc.nextInt();    
+        int arr[]=new int[n];   
+        System.out.println("Enter the array elements: ");
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();    
+        }
+        System.out.println("The Even Elements are:");
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]%2==0)  
+            {
+                System.out.print(arr[i]+" ");
+            }
+        }
+        System.out.println(" ");
+        System.out.println("The Odd Elements are:");
+        for(int i=0;i<n;i++)
+        {
+            if(arr[i]%2!=0)   
+            {
+                System.out.print(arr[i]+" ");
+            }
+        }
+    }
+}
+
+4.	Write a program to print largest number among three numbers.
+import java.util.Scanner;
+class largest
+{
+    public static void main (String args[])
+    {
+        int a,b,c;
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter the first number:");
+        a=sc.nextInt();
+        System.out.println("enter the second number:");
+        b=sc.nextInt();
+        System.out.println("enter the third number:");
+        c=sc.nextInt();
+        if(a>=b&&a>=c)
+            System.out.println("Largest number is="+a);
+        else if(b>=a&&b>=c)
+            System.out.println("Largest number is="+b);
+        else
+            System.out.println("Largest number is="+c);
+    }
+}
+
+5.	Write a program to print even number between 10 and 100 using while.
+class print
+{
+    public static void main (String args[])
+    {
+        int i=10;
+        System.out.println("The even numbers between 10 and 100 are:");
+        while(i<=100)
+        {
+            System.out.println(i);
+            i=i+2;
+        }
+    }
+}
+
+6.	Write a program to print 1 to 10 using the do-while loop statement.
+class number
+{
+    public static void main (String args[])
+    {
+        int i=1;
+        do
+        {
+            System.out.print(i+" ");
+            i++;
+        }
+        while(i<=10);
+    }
+}
+
+7.	Write a program to find Armstrong number or not.
+import java.util.Scanner;
+class armstrong
+{
+    public static void main (String args[])
+    {
+        int n,on,r,result=0;
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter a number:");
+        n=sc.nextInt();
+        on=n;
+        while (on! =0)
+        {
+            r=on%10;
+            result+=Math.pow(r,3);
+            on=on/10;
+        }
+        if(result==n)
+            System.out.println("The number is armstrong");
+        else
+            System.out.println("The number is not armstrong");
+    }
+}
+
+8.	Write a program to find the prime or not.
+import java.util.Scanner;
+class prime
+{
+    public static void main (String args[])
+    {
+        int n,i;
+        boolean flag=false;
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter a number:");
+        n=sc.nextInt();
+        for(i=2;i<n/2;i++)
+        {
+            if(n%i==0)
+                flag=true;
+                break;
+        }
+        if (! flag)
+            System.out.println("It is a prime number");
+        else
+            System.out.println("It is not a prime number");
+    }
+}
+
+9.	Write a program to palindrome or not.
+import java.util.Scanner;
+class palindrome
+{
+    public static void main (String args[])
+    {
+        int n,rev=0,r,on;
+        Scanner sc=new Scanner (System.in);
+        System.out.println("enter a number:");
+        n=sc.nextInt();
+        on=n;
+        while (n! =0)
+        {
+            r=n%10;
+            rev=rev*10+r;
+            n=n/10;
+        }
+        if(on==rev)
+            System.out.println("The number is palindrome");
+        else
+            System.out.println("The number is not palindrome");
+   }
+}
+
+10.	Program to check whether a number is EVEN or ODD using switch.
+import java.util.Scanner;
+class evenodd
+{
+    public static void main (String args[])
+    {
+        int n;
+        System.out.println("enter a number:");
+        n=new Scanner (System.in).nextInt();
+        switch(n%2)
+        {
+            case 1:
+                    System.out.println("The number is even");
+                    break;
+            case 2:
+                    System.out.println("The number is odd");
+                    break;
+        }
+    }
+}
+
+11.	Print gender (Male/Female) program according to given M/F using switch.
+import java.util.Scanner;
+class MF
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("enter a character(M/F):");
+        char gender=sc.next().charAt(0);
+        switch(gender)
+        {
+            case 'M':
+                    System.out.println("Gender is male");
+                    break;
+            case 'F':
+                    System.out.println("Gender is female");
+                    break;
+        }
+    }
+}
+
+12.	Program for multiple if else statement (Largest number in 10,20 and 30)
+class multiple
+{
+    public static void main (String args[])
+    {
+        int a=10, b=5,c=15;
+        if(a>b&&a>c)
+            System.out.println("Largest number is="+a);
+        else if(b>a&&b>c)
+            System.out.println("Largest number is="+b);
+        else
+            System.out.println("Largest number is="+c);
+    }
+}
