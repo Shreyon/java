@@ -1,0 +1,46 @@
+1. Write a class with 2 static variables, 2 Instance variables, 2 static methods, 2 instance methods and a main method. 
+2. Print instance variables in static methods 
+3. Print static variables in Instance methods 
+4. Call instance methods in static methods
+5. Call static methods in instance methods 
+6. Print all the static, instance variables in main method 
+7. Call static methods and instance methods in main method.
+
+class method
+{
+    static int sv1=54;
+    static int sv2=64;
+    
+    int iv1=44;
+    int iv2=34;
+    
+    static void method()
+    {
+        method ob=new method();
+        System.out.println("Instance variables:"+ob.iv1+" "+ob.iv2);
+    }
+    
+    void instanceMethod()
+    {
+        System.out.println("Static variables:"+sv1+" "+sv2);
+    }
+    
+    static void staticMethod()
+    {
+        method ob=new method();
+        ob.instanceMethod();
+    }
+    
+    void instanceMethod2()
+    {
+        method();
+    }
+    public static void main(String args[])
+    {
+        method ob1=new method();
+        method();
+        staticMethod();
+        ob1.instanceMethod();
+        ob1.instanceMethod2();
+    }
+}
